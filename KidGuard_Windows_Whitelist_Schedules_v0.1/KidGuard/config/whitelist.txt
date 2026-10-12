@@ -1,0 +1,11 @@
+# One ASCII domain per line. No https://, path, or port.
+# Exact entries do NOT include subdomains.
+# *.example.org includes subdomains, NOT example.org itself.
+# Add only trusted sites. Broad cloud, proxy, VPN or hosting domains are unsafe choices.
+wikipedia.org
+*.wikipedia.org
+upload.wikimedia.org
+www.khanacademy.org
+cdn.kastatic.org
+cdn.kasandbox.org
+# Add the exact school portal and any required asset/login domains after testing.

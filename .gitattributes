@@ -1,0 +1,2 @@
+# Store every file byte-for-byte: SHA256SUMS.txt must match on every clone, whatever core.autocrlf is set to.
+* -text

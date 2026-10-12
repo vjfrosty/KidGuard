@@ -1,0 +1,47 @@
+# Build output
+build/
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.msi
+*.zip
+
+# .NET / Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+*.nupkg
+packages/
+TestResults/
+Reserch/
+Debrecated/
+
+# Logs and backups
+*.log
+*.bak
+*.tmp
+*~
+
+# Editors
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Secrets / local config
+*.env
+.env*
+*.pfx
+*.key
+
+# Shortcuts made by Build.ps1 (they contain this PC's full paths)
+*.lnk
+
+# Release zips made by tools\New-ReleasePackage.ps1 (uploaded to GitHub Releases)
+dist/

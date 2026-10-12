@@ -1,0 +1,12 @@
+{
+  "timeZone": "FLE Standard Time",
+  "forceLock": false,
+  "accountHours": [
+    { "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "start": "16:00", "end": "20:00" },
+    { "days": ["Saturday", "Sunday"], "start": "09:00", "end": "20:00" }
+  ],
+  "internetHours": [
+    { "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "start": "16:00", "end": "19:30" },
+    { "days": ["Saturday", "Sunday"], "start": "09:00", "end": "19:30" }
+  ]
+}

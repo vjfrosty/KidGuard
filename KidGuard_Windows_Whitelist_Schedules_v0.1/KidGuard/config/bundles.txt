@@ -1,0 +1,130 @@
+# Site bundles offered by the Parent Panel ("Add from list").
+# Format: [Category | Site name], then one whitelist entry per line (same rules as whitelist.txt).
+#
+# Each site was opened in Chrome and Edge through the filter ("Check what the site needs") and the addresses
+# its pages need were added. Statistics, advertising and chat widgets are left out on purpose; pages work without them.
+# Google Fonts and Google Family Link are always allowed by KidGuard itself. Sites change: if one breaks later,
+# check the panel's "Blocked" tab, or allow it again with "Check what the site needs first".
+# Wildcards (*.) are used only where the subdomains belong to the site itself.
+
+[Bulgarian learning | Khan Academy (Bulgarian)]
+bg.khanacademy.org
+www.khanacademy.org
+*.khanacademy.org
+cdn.kastatic.org
+cdn.kasandbox.org
+# Sign-in and the privacy settings window.
+descopecdn.com
+transcend-cdn.com
+code.jquery.com
+# The Help Centre is behind a Cloudflare check.
+challenges.cloudflare.com
+
+[Bulgarian learning | Knigovishte]
+knigovishte.bg
+*.knigovishte.bg
+
+[Bulgarian learning | Ucha.se]
+# static.ucha.se serves all pictures, styles and scripts: without it the site looks empty.
+ucha.se
+*.ucha.se
+
+[Bulgarian learning | e-Prosveta]
+e-prosveta.bg
+www.e-prosveta.bg
+prosveta.bg
+*.prosveta.bg
+ajax.googleapis.com
+*.e-prosveta.bg
+*.gstatic.com
+
+[Languages | EU Learning Corner]
+learning-corner.learning.europa.eu
+webtools.europa.eu
+cdn.eaec.fpfis.tech.ec.europa.eu
+audiovisual.ec.europa.eu
+# Videos.
+*.theoplayer.com
+vod.prd.commavservices.eu
+
+[Languages | LearnEnglish Kids (British Council)]
+learnenglishkids.britishcouncil.org
+*.britishcouncil.org
+
+[Coding and maths | Code.org]
+code.org
+*.code.org
+# Translates the pages into Bulgarian.
+global.localizecdn.com
+
+[Coding and maths | Scratch]
+scratch.mit.edu
+*.scratch.mit.edu
+# Scratch help pages.
+*.freshdesk.com
+*.gstatic.com
+
+[Coding and maths | Math Learning Center apps]
+www.mathlearningcenter.org
+apps.mathlearningcenter.org
+*.mathlearningcenter.org
+*.gstatic.com
+# Lesson videos are Vimeo embeds.
+player.vimeo.com
+*.vimeocdn.com
+
+[Coding and maths | Polypad]
+polypad.amplify.com
+learning.amplify.com
+api.learning.amplify.com
+*.amplify.com
+
+[Coding and maths | Toy Theater]
+toytheater.com
+www.toytheater.com
+*.toytheater.com
+
+[Science and space | NASA Space Place]
+spaceplace.nasa.gov
+*.nasa.gov
+ajax.googleapis.com
+
+[Science and space | ESA Kids]
+www.esa.int
+esa.int
+*.esa.int
+unpkg.com
+
+[Science and space | National Geographic Kids]
+natgeokids.com
+www.natgeokids.com
+kids.nationalgeographic.com
+cdn.creatureandcoagency.com
+fast.fonts.net
+cdnjs.cloudflare.com
+*.natgeokids.com
+*.gstatic.com
+cognito-identity.eu-west-1.amazonaws.com
+d2d7do8qaecbru.cloudfront.net
+
+[Creative and games | ChessKid]
+chesskid.com
+*.chesskid.com
+media.chesskidfiles.com
+chesskid.chess-platform.com
+
+[Creative and games | Chrome Music Lab]
+musiclab.chromeexperiments.com
+*.gstatic.com
+ajax.googleapis.com
+gweb-musiclab-site.appspot.com
+
+[Creative and games | Krokotak]
+krokotak.com
+www.krokotak.com
+*.krokotak.com
+
+[Creative and games | Wordwall]
+wordwall.net
+*.wordwall.net
+wordwallappdev-aafyakaratd2cffh.z02.azurefd.net

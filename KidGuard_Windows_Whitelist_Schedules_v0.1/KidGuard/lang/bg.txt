@@ -1,0 +1,846 @@
+# KidGuard: Bulgarian texts.
+# Pairs of lines: "en:" is the English text exactly as in the program, "bg:" is what is shown instead.
+# Keep {0}, {1} and {0:...} placeholders. "\n" is a line break. Lines starting with # are comments.
+# A missing or changed pair just shows the English text. Build.ps1 lists English texts without a pair.
+
+# ---------- Shared ----------
+en: Save
+bg: Запази
+en: 1 minute
+bg: 1 минута
+en: {0} minutes
+bg: {0} минути
+en: {0} days
+bg: {0} дни
+en: {0} h
+bg: {0} ч
+en: {0} h {1} min
+bg: {0} ч {1} мин
+en: {0} min
+bg: {0} мин
+en: today {0}
+bg: днес {0}
+en: tomorrow {0}
+bg: утре {0}
+en: until unlocked
+bg: до отключване
+en: Mon
+bg: Пн
+en: Tue
+bg: Вт
+en: Wed
+bg: Ср
+en: Thu
+bg: Чт
+en: Fri
+bg: Пт
+en: Sat
+bg: Сб
+en: Sun
+bg: Нд
+
+# ---------- Messages to the child from the service ----------
+en: Windows will sign you out in {0}. Save your work now.
+bg: Windows ще излезе от профила ти след {0}. Запази работата си сега.
+en: The internet will turn off in {0}.
+bg: Интернетът ще спре след {0}.
+
+# ---------- Results of parent actions ----------
+en: Locked for {0} minutes.
+bg: Заключено за {0} минути.
+en: Locked until unlocked.
+bg: Заключено до отключване.
+en: Lock removed; the normal schedule applies.
+bg: Заключването е премахнато; важи обичайният график.
+en: Extra time until {0:ddd dd.MM HH:mm} (internet included).
+bg: Допълнително време до {0:ddd dd.MM HH:mm} (с интернет).
+en: Extra time until {0:ddd dd.MM HH:mm} (offline only).
+bg: Допълнително време до {0:ddd dd.MM HH:mm} (без интернет).
+en: Internet paused for {0} minutes.
+bg: Интернетът е спрян за {0} минути.
+en: Internet pause removed.
+bg: Паузата на интернета е премахната.
+en: All temporary overrides removed.
+bg: Всички временни промени са премахнати.
+en: Allowed {0}.
+bg: Разрешено: {0}.
+en: {0} is already allowed.
+bg: {0} вече е разрешен.
+en: Removed {0}.
+bg: Премахнато: {0}.
+en: {0} was not in the whitelist.
+bg: {0} не беше в списъка с разрешени.
+en: Schedule saved.
+bg: Графикът е запазен.
+en: Whitelist saved.
+bg: Списъкът с разрешени сайтове е запазен.
+en: Allowed {0} (asked by the child).
+bg: Разрешено по молба на детето: {0}.
+en: Said no to {0}.
+bg: Отказано: {0}.
+en: Said no to {0} more minutes.
+bg: Отказани {0} минути допълнително време.
+en: Removed {0} answered request(s).
+bg: Премахнати отговорени молби: {0}.
+en: Language set to Bulgarian.
+bg: Езикът е сменен на български.
+en: Language set to English.
+bg: Езикът е сменен на английски.
+en: The child's helper is turned on.
+bg: Помощникът за детето е включен.
+en: The child's helper is turned off.
+bg: Помощникът за детето е изключен.
+en: Start page "{0}" imported with {1} linked sites.
+bg: Началната страница „{0}“ е заредена с {1} сайта с връзки.
+en: Allowed the start page's sites: {0} new rule(s).
+bg: Сайтовете от началната страница са разрешени: {0} нови правила.
+en: The shortcut appears on the child's desktop when they are signed in.
+bg: Прекият път се появява на работния плот на детето, когато е влязло в профила си.
+en: Start page turned off; the shortcut is removed within a few seconds.
+bg: Началната страница е изключена; прекият път изчезва до няколко секунди.
+
+# ---------- Error messages ----------
+en: Minutes must be 1-10080.
+bg: Минутите трябва да са от 1 до 10080.
+en: Minutes must be a whole number.
+bg: Минутите трябва да са цяло число.
+en: The account is locked; unlock it first.
+bg: Профилът е заключен; първо го отключете.
+en: This request no longer exists.
+bg: Тази молба вече не съществува.
+en: This request was already answered.
+bg: На тази молба вече е отговорено.
+en: This request is not for a site.
+bg: Тази молба не е за сайт.
+en: This request is not for time.
+bg: Тази молба не е за време.
+en: Configuration is busy; retry.
+bg: Настройките се записват в момента; опитайте отново.
+en: The page is larger than 5 MB.
+bg: Страницата е по-голяма от 5 MB.
+en: The page contains no http:// or https:// links.
+bg: Страницата не съдържа връзки с http:// или https://.
+en: Use ASCII/punycode domains only.
+bg: Използвайте само латински адреси (ASCII или punycode).
+en: A domain, not an IP address, is required.
+bg: Нужен е адрес на сайт (домейн), а не IP адрес.
+en: Equal start/end is ambiguous; use 00:00-24:00 for all day.
+bg: Еднакво начало и край са двусмислени; за цял ден използвайте 00:00-24:00.
+
+# ---------- Parent Panel: window and dashboard ----------
+en: The KidGuard Parent Panel must run as administrator.
+bg: Родителският панел на KidGuard трябва да се стартира като администратор.
+en: KidGuard configuration was not found in:\n{0}\n\nInstall KidGuard first.
+bg: Настройките на KidGuard не са намерени в:\n{0}\n\nПърво инсталирайте KidGuard.
+en: child
+bg: детето
+en: KidGuard Parent Panel - {0}
+bg: KidGuard – Родителски панел – {0}
+en: Parent Panel
+bg: Родителски панел
+en: Dashboard
+bg: Табло
+en: Schedule
+bg: График
+en: Allowed sites
+bg: Разрешени сайтове
+en: Requests
+bg: Молби
+en: Requests ({0})
+bg: Молби ({0})
+en: Start page
+bg: Начална страница
+en: Blocked
+bg: Блокирани
+en: Activity log
+bg: Дневник
+en: Settings
+bg: Настройки
+en: The schedule has unsaved changes. Close without saving?
+bg: Графикът има незапазени промени. Да се затвори ли без запазване?
+en: Changes apply within about 5 seconds. Times are shown in the schedule's time zone.
+bg: Промените влизат в сила до около 5 секунди. Часовете са в часовата зона на графика.
+en: Windows account
+bg: Профил в Windows
+en: Internet
+bg: Интернет
+en: Protection
+bg: Защита
+en: Include internet
+bg: С интернет
+en: Temporary changes
+bg: Временни промени
+en: Lock now
+bg: Заключи сега
+en: Lock now? Your child will be signed out immediately and may lose unsaved work.
+bg: Да се заключи ли сега? Детето ще бъде изведено от профила веднага и може да загуби незапазена работа.
+en: Lock for 1 hour
+bg: Заключи за 1 час
+en: Lock for 1 hour? Your child will be signed out immediately.
+bg: Да се заключи ли за 1 час? Детето ще бъде изведено от профила веднага.
+en: Unlock
+bg: Отключи
+en: +15 min
+bg: +15 мин
+en: +30 min
+bg: +30 мин
+en: +1 hour
+bg: +1 час
+en: Pause 30 min
+bg: Пауза 30 мин
+en: Pause 1 hour
+bg: Пауза 1 час
+en: Resume internet
+bg: Пусни интернета
+en: Lock
+bg: Заключване
+en: Extra time (added after today's end time)
+bg: Допълнително време (добавя се след днешния край)
+en: Reset
+bg: Нулиране
+en: Clear all temporary changes
+bg: Премахни всички временни промени
+en: The child sees a warning 10 minutes and 1 minute before sign-out, and 5 minutes before the internet turns off.
+bg: Детето вижда предупреждение 10 минути и 1 минута преди излизане от профила и 5 минути преди спиране на интернета.
+en: running
+bg: работи
+en: stopped
+bg: спряна
+en: not installed
+bg: не е инсталирана
+en: starting
+bg: стартира
+en: stopping
+bg: спира
+en: Protection failed closed
+bg: Защитата блокира всичко поради грешка
+en: OFF
+bg: ИЗКЛ.
+en: ALLOWED
+bg: РАЗРЕШЕН
+en: No change in the next 8 days
+bg: Без промяна през следващите 8 дни
+en: Sign-out {0}
+bg: Излизане {0}
+en: Opens {0}
+bg: Отваря се {0}
+en: ON
+bg: ВКЛ.
+en: Turns off {0}
+bg: Спира {0}
+en: Turns on {0}
+bg: Пуска се {0}
+en: ACTIVE
+bg: АКТИВНА
+en: Service running
+bg: Услугата работи
+en: child signed in
+bg: детето е влязло
+en: child not signed in
+bg: детето не е влязло
+en: NOT REPORTING
+bg: НЕ ОТГОВАРЯ
+en: Service: {0}
+bg: Услуга: {0}
+en: Account allowed
+bg: Профилът е разрешен
+en: Account blocked
+bg: Профилът е блокиран
+en: Internet on
+bg: Интернетът е пуснат
+en: Internet off
+bg: Интернетът е спрян
+en: Your child's account has administrator rights. With them KidGuard can be removed or bypassed.\nMake it a Standard account (Settings > Accounts > Other users > Change account type) or remove it from the Administrators group.
+bg: Профилът на детето има администраторски права. С тях KidGuard може да бъде премахнат или заобиколен.\nНаправете го стандартен профил (Настройки > Акаунти > Други потребители > Промяна на типа акаунт) или го премахнете от групата Administrators.
+en: Protection failed closed: {0}\nThe child is signed out and web access is blocked until this is fixed.
+bg: Защитата блокира всичко поради грешка: {0}\nДетето е изведено от профила и интернетът е спрян, докато това не бъде оправено.
+en: A settings file has an error: {0}\nKidGuard keeps using the last valid settings. Fix it from the Schedule or Allowed sites tab.
+bg: Файл с настройки има грешка: {0}\nKidGuard продължава с последните валидни настройки. Поправете я от раздел „График“ или „Разрешени сайтове“.
+en: The KidGuard service is not installed.
+bg: Услугата на KidGuard не е инсталирана.
+en: The KidGuard service is not reporting ({0}).
+bg: Услугата на KidGuard не отговаря ({0}).
+en: The status above is calculated from the settings, not confirmed by the service.
+bg: Състоянието по-горе е изчислено от настройките, а не потвърдено от услугата.
+en: {0} is asking you for {1} thing(s).
+bg: {0} ви моли за нещо (молби: {1}).
+en: Open Requests
+bg: Отвори „Молби“
+en: Locked by schedule file (forceLock) — press Unlock to clear.
+bg: Заключено от файла с графика (forceLock) – натиснете „Отключи“, за да го премахнете.
+en: Locked until you unlock.
+bg: Заключено, докато не отключите.
+en: Locked until {0}.
+bg: Заключено до {0}.
+en: Extra time until {0} (with internet).
+bg: Допълнително време до {0} (с интернет).
+en: Extra time until {0} (offline only).
+bg: Допълнително време до {0} (без интернет).
+en: Internet paused until {0}.
+bg: Интернетът е спрян до {0}.
+en: None. The weekly schedule applies.
+bg: Няма. Важи седмичният график.
+
+# ---------- Parent Panel: requests ----------
+en: with internet
+bg: с интернет
+en: Request
+bg: Молба
+en: Why (in {0}'s words)
+bg: Защо (думите на {0})
+en: Asked
+bg: Кога
+en: Answer
+bg: Отговор
+en: {0} can ask for a blocked site or for more time with the KidGuard icon next to the clock. {0} sees your answer within a few seconds.
+bg: {0} може да поиска блокиран сайт или още време от иконата на KidGuard до часовника. {0} вижда отговора ви до няколко секунди.
+en: Allow only sites you know. "Whole site" also allows its subdomains (e.g. en.wikipedia.org for wikipedia.org).
+bg: Разрешавайте само сайтове, които познавате. „Целия сайт“ разрешава и поддомейните му (напр. en.wikipedia.org за wikipedia.org).
+en: Allow whole site
+bg: Разреши целия сайт
+en: Allow only this address
+bg: Разреши само този адрес
+en: Give the time
+bg: Дай времето
+en: Say no
+bg: Откажи
+en: Clear answered
+bg: Изчисти отговорените
+en: Allow only {0}
+bg: Разреши само {0}
+en: Give {0} more minutes
+bg: Дай още {0} минути
+en: {0} more minutes
+bg: още {0} минути
+en: Waiting for you
+bg: Чака вашия отговор
+en: Allowed: {0}
+bg: Разрешено: {0}
+en: Time given
+bg: Времето е дадено
+en: You said no
+bg: Отказахте
+en: No answer within a day
+bg: Без отговор за един ден
+en: Cannot read the requests: {0}
+bg: Молбите не могат да бъдат прочетени: {0}
+en: No requests yet.
+bg: Още няма молби.
+en: {0} waiting, {1} answered.
+bg: Чакащи: {0}, отговорени: {1}.
+
+# ---------- Parent Panel: schedule ----------
+en: internet on, but Windows time is off here (no effect)
+bg: интернетът е пуснат, но тук няма време в Windows (без ефект)
+en: Windows allowed
+bg: Windows е разрешен
+en: Windows blocked
+bg: Windows е блокиран
+en: Drag to mark allowed time. Start the drag on a coloured cell to erase.
+bg: Плъзнете, за да отбележите разрешено време. Започнете от оцветена клетка, за да изтриете.
+en: Windows only (offline)
+bg: Само Windows (без интернет)
+en: Internet on but no Windows time (no effect)
+bg: Интернет без време в Windows (без ефект)
+en: Windows account allowed
+bg: Профилът в Windows е разрешен
+en: Not allowed
+bg: Не е разрешено
+en: Windows account hours
+bg: Часове за профила в Windows
+en: Internet hours
+bg: Часове за интернет
+en: Save schedule
+bg: Запази графика
+en: Undo changes
+bg: Отмени промените
+en: Internet = Windows hours
+bg: Интернет = часовете за Windows
+en: Clear all
+bg: Изчисти всичко
+en: Time zone
+bg: Часова зона
+en: The schedule cannot be read: {0}
+bg: Графикът не може да бъде прочетен: {0}
+en: schedule.json has an error ({0}); showing the last valid schedule. Saving replaces the broken file.
+bg: schedule.json има грешка ({0}); показан е последният валиден график. Запазването заменя повредения файл.
+en: Some times are not on 15-minute steps; saving from this grid rounds them.
+bg: Някои часове не са през 15 минути; при запазване от тази таблица те се закръглят.
+en: The schedule file has a manual lock (forceLock). Use Unlock on the Dashboard to clear it.
+bg: Файлът с графика съдържа ръчно заключване (forceLock). Използвайте „Отключи“ в таблото, за да го премахнете.
+en: Windows: {0}
+bg: Windows: {0}
+en: Internet: {0}
+bg: Интернет: {0}
+en: (internet also needs Windows time)
+bg: (интернетът изисква и време в Windows)
+en: never
+bg: никога
+en: Choose a time zone.
+bg: Изберете часова зона.
+en: No Windows time is allowed at all. Your child will not be able to sign in. Save anyway?
+bg: Не е разрешено никакво време в Windows. Детето няма да може да влиза в профила си. Да се запази ли все пак?
+
+# ---------- Parent Panel: settings ----------
+en: Apply (restarts the Parent Panel)
+bg: Приложи (рестартира родителския панел)
+en: Used for the Parent Panel and for everything {0} sees from KidGuard: warnings before sign-out and the helper next to the clock.
+bg: Използва се за родителския панел и за всичко, което {0} вижда от KidGuard: предупрежденията преди излизане и помощника до часовника.
+en: Language
+bg: Език
+en: Show the KidGuard helper next to the clock on {0}'s account
+bg: Показвай помощника на KidGuard до часовника в профила на {0}
+en: It shows {0} how much time is left and when the internet turns off, and lets {0} ask you for a blocked site or more time.\nRequests appear in the Requests tab. Turning it off closes it within a few seconds.
+bg: Той показва на {0} колко време остава и кога спира интернетът и позволява на {0} да ви помоли за блокиран сайт или още време.\nМолбите се появяват в раздел „Молби“. Ако го изключите, той се затваря до няколко секунди.
+en: Helper for {0}
+bg: Помощник за {0}
+en: KidGuard version {0}
+bg: KidGuard версия {0}
+en: Settings folder: {0}
+bg: Папка с настройките: {0}
+en: To remove KidGuard: Settings > Apps > Installed apps > KidGuard parental controls > Uninstall.
+bg: За премахване на KidGuard: Настройки > Приложения > Инсталирани приложения > KidGuard parental controls > Деинсталиране.
+en: About
+bg: Относно
+
+# ---------- Parent Panel: allowed sites ----------
+en: Every address ending in .{0} (not {0} itself)
+bg: Всеки адрес, завършващ на .{0} (без самия {0})
+en: Only {0}
+bg: Само {0}
+en: Whole site (also all its subdomains)
+bg: Целия сайт (и всичките му поддомейни)
+en: Rule
+bg: Правило
+en: What it allows
+bg: Какво разрешава
+en: Add
+bg: Добави
+en: Paste a web address or type a site name, e.g. https://www.ucha.se/ or scratch.mit.edu
+bg: Поставете уеб адрес или напишете име на сайт, напр. https://www.ucha.se/ или scratch.mit.edu
+en: Check whether an address is allowed:
+bg: Проверете дали даден адрес е разрешен:
+en: Remove selected
+bg: Премахни избраните
+en: Add from site list...
+bg: Добави от списъка със сайтове...
+en: Edit as text...
+bg: Редактирай като текст...
+en: Allow a site
+bg: Разреши сайт
+en: Test an address
+bg: Проверка на адрес
+en: Allowed rules (changes apply within about 5 seconds; open pages may need a refresh)
+bg: Разрешени правила (промените важат до около 5 секунди; отворените страници може да трябва да се презаредят)
+en: Will add: {0}
+bg: Ще бъде добавено: {0}
+en: Remove {0}?
+bg: Да се премахне ли {0}?
+en: {0} is allowed by {1}
+bg: {0} е разрешен чрез {1}
+en: {0} is blocked (no matching rule)
+bg: {0} е блокиран (няма подходящо правило)
+en: Cannot read the allowed list: {0}
+bg: Списъкът с разрешени сайтове не може да бъде прочетен: {0}
+en: Add from site list
+bg: Добавяне от списъка със сайтове
+en: Cannot read the site list ({0}):\n{1}
+bg: Списъкът със сайтове не може да бъде прочетен ({0}):\n{1}
+en: These are starting points. Sites often load pictures, videos or logins from other addresses:\nafter your child first uses a site, check the Blocked tab and allow what it needs.
+bg: Това са само начални настройки. Сайтовете често зареждат снимки, видео или вход от други адреси:\nслед като детето използва сайта за първи път, проверете раздел „Блокирани“ и разрешете нужното.
+en: Add selected
+bg: Добави избраните
+en: Added {0} site(s), {1} new rule(s).
+bg: Добавени сайтове: {0}, нови правила: {1}.
+en: already allowed
+bg: вече е разрешен
+en: Edit allowed sites as text
+bg: Редактиране на разрешените сайтове като текст
+en: One site per line. "example.org" allows only that address; "*.example.org" allows every address ending in .example.org.\nLines starting with # are comments. The text is checked before it is saved.
+bg: По един сайт на ред. „example.org“ разрешава само този адрес; „*.example.org“ разрешава всеки адрес, завършващ на .example.org.\nРедовете, започващи с #, са коментари. Текстът се проверява преди запазване.
+en: Check and save
+bg: Провери и запази
+en: Not saved.
+bg: Не е запазено.
+
+# ---------- Parent Panel: blocked and log ----------
+en: Address your child tried to open
+bg: Адрес, който детето е опитало да отвори
+en: Attempts
+bg: Опити
+en: Last seen
+bg: Последно
+en: First seen
+bg: Първо
+en: Addresses blocked because they are not on the allowed list. When an allowed site looks broken (missing pictures,\nvideos that will not play, login failing), open it on the child's account and check here for the addresses it needs.\nOnly allow addresses you recognise as part of that site.
+bg: Адреси, блокирани, защото не са в списъка с разрешени. Когато разрешен сайт не работи добре (липсват снимки,\nвидеото не тръгва, входът не става), отворете го в профила на детето и проверете тук кои адреси са му нужни.\nРазрешавайте само адреси, за които знаете, че са част от този сайт.
+en: Allow this address
+bg: Разреши този адрес
+en: Dismiss
+bg: Скрий
+en: Refresh
+bg: Обнови
+en: Select one or more addresses first.
+bg: Първо изберете един или повече адреси.
+en: Allow these rules?
+bg: Да се разрешат ли тези правила?
+en: Dismissed {0} address(es).
+bg: Скрити адреси: {0}.
+en: Cannot read the blocked list: {0}
+bg: Списъкът с блокирани адреси не може да бъде прочетен: {0}
+en: Nothing blocked yet.
+bg: Още нищо не е блокирано.
+en: {0} address(es).
+bg: Адреси: {0}.
+en: Only parent actions, requests, warnings and errors
+bg: Само действия на родителя, молби, предупреждения и грешки
+en: Times are in the schedule's time zone. Newest at the bottom. Log lines are in English.
+bg: Часовете са в часовата зона на графика. Най-новото е най-долу. Редовете в дневника са на английски.
+en: No log yet.
+bg: Дневникът още е празен.
+en: Cannot read the log: {0}
+bg: Дневникът не може да бъде прочетен: {0}
+
+# ---------- Parent Panel: start page ----------
+en: Site the page links to
+bg: Сайт, към който води страницата
+en: Allowed?
+bg: Разрешен ли е?
+en: Turn on
+bg: Включи
+en: Allow all its sites
+bg: Разреши всичките ѝ сайтове
+en: Use another page...
+bg: Друга страница...
+en: Preview
+bg: Преглед
+en: The page is copied to a folder only {0} and administrators can read. While it is on, a shortcut with the KidGuard icon is kept on {0}'s desktop\n(it appears within a few seconds after {0} signs in, and comes back if deleted). Allowing a site also allows the extra addresses listed for it in the site list.
+bg: Страницата се копира в папка, която могат да четат само {0} и администраторите. Докато е включена, на работния плот на {0} има пряк път с иконата на KidGuard\n(появява се до няколко секунди след влизане на {0} и се връща, ако бъде изтрит). Разрешаването на сайт разрешава и допълнителните адреси, посочени за него в списъка със сайтове.
+en: No start page yet
+bg: Още няма начална страница
+en: Choose an HTML page with links for {0} ("Use another page...").
+bg: Изберете HTML страница с връзки за {0} („Друга страница...“).
+en: Allowed by {0}
+bg: Разрешен чрез {0}
+en: Not allowed yet
+bg: Още не е разрешен
+en: {0} linked sites, all allowed.
+bg: Сайтове с връзки: {0}, всички са разрешени.
+en: {0} linked sites, {1} not allowed yet (press "Allow all its sites").
+bg: Сайтове с връзки: {0}, още неразрешени: {1} (натиснете „Разреши всичките ѝ сайтове“).
+en: Shortcut on the desktop: {0}
+bg: Пряк път на работния плот: {0}
+en: The shortcut appears on {0}'s desktop after {0} signs in.
+bg: Прекият път се появява на работния плот на {0}, след като {0} влезе в профила си.
+en: Not on {0}'s desktop. Press "Turn on" to put it there and allow its sites.
+bg: Не е на работния плот на {0}. Натиснете „Включи“, за да я поставите там и да разрешите сайтовете ѝ.
+en: Turn off (remove from desktop)
+bg: Изключи (махни от работния плот)
+en: Turn on: put on {0}'s desktop
+bg: Включи: сложи я на работния плот на {0}
+en: Choose the start page for {0}
+bg: Изберете началната страница за {0}
+en: Web pages
+bg: Уеб страници
+en: Allow all the sites this page links to?
+bg: Да се разрешат ли всички сайтове, към които води тази страница?
+
+# ---------- Setup wizard ----------
+en: Start setup by double-clicking Setup.cmd in the KidGuard folder.
+bg: Стартирайте инсталацията с двукратно щракване върху Setup.cmd в папката на KidGuard.
+en: KidGuard setup
+bg: Инсталиране на KidGuard
+en: Please wait until setup finishes.
+bg: Изчакайте инсталирането да завърши.
+en: Welcome
+bg: Начало
+en: Choose account
+bg: Избор на профил
+en: Confirm
+bg: Потвърждение
+en: Install
+bg: Инсталирай
+en: Installing
+bg: Инсталиране
+en: Finish
+bg: Готово
+en: Back
+bg: Назад
+en: Cancel
+bg: Отказ
+en: Next
+bg: Напред
+en: Set up KidGuard
+bg: Инсталиране на KidGuard
+en: Parental controls for one Windows account on this computer.
+bg: Родителски контрол за един профил в Windows на този компютър.
+en: Language:
+bg: Език:
+en: KidGuard will:
+bg: KidGuard ще:
+en: •  allow your child's Windows account only at the times you choose, and sign it out afterwards\n•  allow internet only at the times you choose, and only to websites on your allowed list\n•  show your child the time left, and let them ask you for a blocked site or more time\n•  add the KidGuard Parent Panel to your Start menu, to change all of this later
+bg: •  разрешава профила на детето в Windows само в избраните от вас часове и след това излиза от него\n•  разрешава интернет само в избраните от вас часове и само до сайтовете в списъка с разрешени\n•  показва на детето оставащото време и му позволява да ви помоли за блокиран сайт или още време\n•  добавя родителския панел на KidGuard в менюто „Старт“, за да променяте всичко това по-късно
+en: Before you continue:
+bg: Преди да продължите:
+en: •  Your child needs their own Windows account (local, Microsoft, work/school or domain), not an administrator, signed in at least once and now signed out.\n•  Keep your own administrator account and password. KidGuard can only be changed or removed with it.\n•  This is an engineering preview. Try it on a test account first and run the checklist in tests\WINDOWS-ACCEPTANCE.md.
+bg: •  Детето трябва да има собствен профил в Windows (локален, Microsoft, служебен/училищен или в домейн), който не е администратор, в който е влизало поне веднъж и от който сега е излязло.\n•  Пазете своя администраторски профил и паролата му. Само с тях KidGuard може да бъде променян или премахван.\n•  Това е пробна версия. Изпробвайте я първо на тестов профил и минете през списъка в tests\WINDOWS-ACCEPTANCE.md.
+en: Could not list the accounts on this computer.
+bg: Профилите на този компютър не могат да бъдат изброени.
+en: Microsoft
+bg: Microsoft
+en: Work/school
+bg: Служебен/училищен
+en: Domain
+bg: Домейн
+en: Local
+bg: Локален
+en: Choose your child's account
+bg: Изберете профила на детето
+en: Only the selected account is restricted. Your own account stays unrestricted.
+bg: Ограничава се само избраният профил. Вашият профил остава без ограничения.
+en: Account
+bg: Профил
+en: Type
+bg: Вид
+en: Status
+bg: Състояние
+en: Keep allowed sites and schedule from the previous KidGuard installation
+bg: Запази разрешените сайтове и графика от предишната инсталация на KidGuard
+en: Refresh list
+bg: Обнови списъка
+en: Open Windows account settings
+bg: Отвори настройките за профили в Windows
+en: No suitable account? Local, Microsoft, work/school and domain accounts can all be used. To add one: Windows Settings > Accounts > Other users > Add account. Sign in to it once, sign out, then press Refresh list.
+bg: Няма подходящ профил? Може да се използва локален, Microsoft, служебен/училищен или профил в домейн. За да добавите профил: Настройки на Windows > Акаунти > Други потребители > Добавяне на акаунт. Влезте в него веднъж, излезте и натиснете „Обнови списъка“.
+en: Ready
+bg: Готов
+en: (account is disabled now)
+bg: (профилът в момента е изключен)
+en: KidGuard is already installed on this computer. To change it, use the Parent Panel. To install it again, first remove it: Settings > Apps > Installed apps > KidGuard parental controls > Uninstall.
+bg: KidGuard вече е инсталиран на този компютър. За промени използвайте родителския панел. За да го инсталирате отново, първо го премахнете: Настройки > Приложения > Инсталирани приложения > KidGuard parental controls > Деинсталиране.
+en: Warning: {0}
+bg: Внимание: {0}
+en: Select an account.
+bg: Изберете профил.
+en: {0} cannot be used yet: {1}
+bg: {0} още не може да бъде използван: {1}
+en: {0} will be protected.
+bg: {0} ще бъде защитен.
+en: Ready to install
+bg: Всичко е готово за инсталиране
+en: Protected account:
+bg: Защитен профил:
+en: Setup will:
+bg: Инсталацията ще:
+en: •  build KidGuard on this computer and run its self-tests (about a minute)
+bg: •  компилира KidGuard на този компютър и изпълни самопроверките му (около минута)
+en: •  block sign-in for {0} briefly while setting up; the schedule then decides when it can sign in
+bg: •  блокира за кратко влизането на {0} по време на инсталацията; след това графикът решава кога може да се влиза
+en: •  set Edge, Chrome and Firefox on {0} to go through KidGuard's website filter
+bg: •  настрои Edge, Chrome и Firefox в профила на {0} да минават през филтъра за сайтове на KidGuard
+en: •  add a background service, a watchdog task, network filter rules, a Start menu shortcut and an Apps & features entry
+bg: •  добави фонова услуга, задача за наблюдение, правила за мрежов филтър, пряк път в менюто „Старт“ и запис в „Приложения“
+en: •  show a KidGuard helper next to the clock on {0}'s account (it can be turned off in the Parent Panel)
+bg: •  покаже помощник на KidGuard до часовника в профила на {0} (може да се изключи от родителския панел)
+en: •  move the previous KidGuard folder aside and keep its allowed sites and schedule
+bg: •  премести настрана папката от предишната инсталация и запази разрешените сайтове и графика от нея
+en: •  move the previous KidGuard folder aside
+bg: •  премести настрана папката от предишната инсталация
+en: Starting settings: your previous schedule and allowed sites (if they are valid).
+bg: Начални настройки: предишният ви график и разрешени сайтове (ако са валидни).
+en: Starting settings: the files in the package's config folder. Unchanged, that means weekdays 16:00-20:00 and weekends 09:00-20:00, with internet until 19:30 and a few learning sites.
+bg: Начални настройки: файловете в папката config. Без промени това означава делнични дни 16:00-20:00 и почивни дни 09:00-20:00, с интернет до 19:30 и няколко образователни сайта.
+en: You can change everything in the Parent Panel afterwards.
+bg: След това можете да промените всичко в родителския панел.
+en: Put the kids' start page on {0}'s desktop and allow the sites it links to
+bg: Сложи детската начална страница на работния плот на {0} и разреши сайтовете, към които води
+en: At the end of allowed time {0} is signed out and unsaved work can be lost. KidGuard shows a warning 10 minutes and 1 minute before.
+bg: В края на разрешеното време {0} излиза от профила и незапазената работа може да се загуби. KidGuard показва предупреждение 10 минути и 1 минута преди това.
+en: Please wait. Do not sign in to {0} until setup has finished.
+bg: Моля, изчакайте. Не влизайте в профила на {0}, докато инсталацията не завърши.
+en: Starting...
+bg: Започване...
+en: KidGuard is installed
+bg: KidGuard е инсталиран
+en: {0} is now protected.
+bg: {0} вече е защитен.
+en: Open the Parent Panel to check the schedule and allowed websites. You can find it later in the Start menu as "KidGuard Parent Panel".
+bg: Отворете родителския панел, за да проверите графика и разрешените сайтове. По-късно ще го намерите в менюто „Старт“ като „KidGuard Parent Panel“.
+en: Open Parent Panel
+bg: Отвори родителския панел
+en: Before relying on it, sign in to {0} during allowed time and check that allowed sites open and other sites are blocked (see tests\WINDOWS-ACCEPTANCE.md).
+bg: Преди да разчитате на него, влезте в профила на {0} в разрешено време и проверете, че разрешените сайтове се отварят, а другите са блокирани (вижте tests\WINDOWS-ACCEPTANCE.md).
+en: Setup did not finish
+bg: Инсталацията не завърши
+en: Changes were rolled back where possible. The details are below.
+bg: Промените са върнати, доколкото е възможно. Подробностите са по-долу.
+en: Fix the problem shown in the last lines and run Setup.cmd again. If an account was left disabled, see "Diagnose and recover" in README.md.
+bg: Оправете проблема от последните редове и стартирайте Setup.cmd отново. Ако профил е останал изключен, вижте „Diagnose and recover“ в README.md.
+en: Close
+bg: Затвори
+
+# ---------- Setup: messages from Install.ps1 ----------
+en: Microsoft account. If it is in a Microsoft Family group, turn off Family screen time and web filters for it so they do not conflict with KidGuard.
+bg: Профил в Microsoft. Ако е в група Microsoft Family, изключете за него ограниченията за екранно време и уеб филтрите на Family, за да не се смесват с KidGuard.
+en: Work or school (Entra ID) account. Sign-in is blocked with the Windows deny-sign-in policy; organisation policies (Intune) may override it. Administrator rights through groups are checked when the child signs in.
+bg: Служебен или училищен профил (Entra ID). Влизането се блокира с правилото на Windows за забрана на влизане; правилата на организацията (Intune) може да го отменят. Администраторските права чрез групи се проверяват, когато детето влезе.
+en: Domain account. Sign-in is blocked with the Windows deny-sign-in policy; domain Group Policy may override it. Administrator rights through groups are checked when the child signs in.
+bg: Профил в домейн. Влизането се блокира с правилото на Windows за забрана на влизане; груповите правила на домейна може да го отменят. Администраторските права чрез групи се проверяват, когато детето влезе.
+en: Built-in Administrator account.
+bg: Вграденият администраторски профил.
+en: This is your own administrator account. The child needs a separate account.
+bg: Това е вашият администраторски профил. Детето има нужда от отделен профил.
+en: This account is an administrator. Make it a Standard account first (Settings > Accounts > Other users > Change account type).
+bg: Този профил е администратор. Първо го направете стандартен (Настройки > Акаунти > Други потребители > Промяна на типа акаунт).
+en: This account is a member of the Administrators group on this PC. Remove it from that group first.
+bg: Този профил е в групата Administrators на компютъра. Първо го премахнете от нея.
+en: This account has never signed in on this PC. Sign in to it once, then sign out.
+bg: В този профил никога не е влизано на този компютър. Влезте в него веднъж и после излезте.
+en: This account is signed in right now. Sign it out completely (switching user is not enough).
+bg: Този профил е влязъл в момента. Излезте от него напълно (смяната на потребител не е достатъчна).
+en: This account is turned off (disabled). If it is your child's account, enable it first.
+bg: Този профил е изключен. Ако е профилът на детето, първо го включете.
+en: The Windows Base Filtering Engine (BFE) service is not running.
+bg: Услугата на Windows Base Filtering Engine (BFE) не работи.
+en: TCP port 8877 is already used by another program.
+bg: TCP порт 8877 вече се използва от друга програма.
+en: Smart App Control is on. It blocks programs that are not signed by a publisher Windows trusts, including KidGuard built on this PC. Windows would then stop KidGuard at random, for example after a restart, and the child account would no longer be locked. See "Smart App Control" in README.md for the options.
+bg: Интелигентното управление на приложения (Smart App Control) е включено. То блокира програми без подпис от издател, на когото Windows има доверие, включително KidGuard, компилиран на този компютър. Тогава Windows би спирал KidGuard в произволен момент, например след рестарт, и профилът на детето вече нямаше да е заключен. Вижте „Smart App Control“ в README.md за възможностите.
+en: Smart App Control is in evaluation mode. If Windows switches it on later, it will block KidGuard and the child account will no longer be locked. Check the Parent Panel regularly, or turn Smart App Control off (see README.md).
+bg: Интелигентното управление на приложения (Smart App Control) е в режим на оценка. Ако Windows го включи по-късно, то ще блокира KidGuard и профилът на детето вече няма да е заключен. Проверявайте родителския панел редовно или изключете Smart App Control (вижте README.md).
+
+# ---------- Helper for the child (next to the clock) ----------
+en: Time is up
+bg: Времето свърши
+en: No limit
+bg: Без ограничение
+en: KidGuard is not running yet.
+bg: KidGuard още не работи.
+en: KidGuard is not answering. The times may be out of date.
+bg: KidGuard не отговаря. Часовете може да не са точни.
+en: Windows is about to sign you out.
+bg: Windows ще излезе от профила ти всеки момент.
+en: computer time left (until {0})
+bg: време на компютъра (до {0})
+en: no sign-out in the next days
+bg: няма излизане през следващите дни
+en: Internet: on until {0}
+bg: Интернет: има до {0}
+en: Internet: on
+bg: Интернет: има
+en: Internet: off (on again at {0})
+bg: Интернет: няма (пак ще има в {0})
+en: Internet: off
+bg: Интернет: няма
+en: not answering
+bg: не отговаря
+en: {0} left
+bg: остават {0}
+en: +{0} min
+bg: +{0} мин
+en: {0} - waiting for an answer
+bg: {0} – чака отговор
+en: {0} - yes
+bg: {0} – да
+en: {0} - no
+bg: {0} – не
+en: {0} - no answer
+bg: {0} – без отговор
+en: Show
+bg: Покажи
+en: Ask for a site...
+bg: Поискай сайт...
+en: Ask for more time...
+bg: Поискай още време...
+en: Yes! You can open {0} now.
+bg: Да! Вече можеш да отвориш {0}.
+en: Your parent said no to {0}.
+bg: Родителят ти отказа {0}.
+en: Yes! You got {0} more minutes.
+bg: Да! Получи още {0} минути.
+en: Your parent said no to more time.
+bg: Родителят ти отказа още време.
+en: Sent. Your parent will see it in KidGuard.
+bg: Изпратено. Родителят ти ще го види в KidGuard.
+en: Could not send the request. Ask your parent directly.
+bg: Молбата не можа да бъде изпратена. Попитай родителя си направо.
+en: What you asked for
+bg: Твоите молби
+en: Is a site blocked that you need for school or a hobby? Ask your parent here.
+bg: Блокиран ли е сайт, който ти трябва за училище или хоби? Помоли родителя си оттук.
+en: Send to my parent
+bg: Изпрати на родителя ми
+en: Why do you need it? (you can leave this empty)
+bg: Защо ти трябва? (може да остане празно)
+en: Ask for a site
+bg: Молба за сайт
+en: Which site do you need?
+bg: Кой сайт ти трябва?
+en: Blocked in the last 30 minutes (click one):
+bg: Блокирани през последните 30 минути (щракни върху някой):
+en: Address of the site, e.g. www.example.com
+bg: Адрес на сайта, напр. www.example.com
+en: Type the address of a site, e.g. www.example.com
+bg: Напиши адреса на сайт, напр. www.example.com
+en: Ask for more time
+bg: Молба за още време
+en: How much more time do you need?
+bg: Колко още време ти трябва?
+en: Extra time is added after your normal end time, if your parent says yes.
+bg: Допълнителното време се добавя след обичайния край, ако родителят ти каже „да“.
+
+# ---------- Check what a site needs ----------
+en: Allowed {0} after checking {1}: {2} new rule(s).
+bg: Разрешено след проверка на {1}: {0}. Нови правила: {2}.
+en: Check what {0} needs
+bg: Проверка какво е нужно на {0}
+en: Allow only sites you know. "Check and allow" opens the site in a hidden browser first and lists every address it needs to load.
+bg: Разрешавайте само сайтове, които познавате. „Провери и разреши“ първо отваря сайта в скрит браузър и показва всички адреси, нужни за зареждането му.
+en: Check and allow the site...
+bg: Провери и разреши сайта...
+en: Address
+bg: Адрес
+en: Rule to add
+bg: Правило за добавяне
+en: Times used
+bg: Пъти
+en: KidGuard opens the site in a hidden browser through a test filter that lets everything through and lists every address the page uses.\nTicked: the site itself and what it needs to load. Not ticked: big general sites (allowing one opens all of it) and tracking or advertising.
+bg: KidGuard отваря сайта в скрит браузър през пробен филтър, който пропуска всичко и записва всеки адрес, използван от страницата.\nОтметнати са: самият сайт и нужното за зареждането му. Неотметнати са: големи общи сайтове (разрешаването отваря целия сайт) и проследяване или реклами.
+en: Allow ticked addresses
+bg: Разреши отметнатите адреси
+en: Videos, logins or games inside a site can still need more. After your child uses the site, check the Blocked tab.
+bg: Видеа, вход или игри в сайта може да изискват още адреси. След като детето използва сайта, проверете раздел „Блокирани“.
+en: Opening the site in a hidden browser...
+bg: Сайтът се отваря в скрит браузър...
+en: Site {0} of {1}
+bg: Сайт {0} от {1}
+en: page {0} of {1}: {2}
+bg: страница {0} от {1}: {2}
+en: The browser could not open {0}. Check the address and the internet connection.
+bg: Браузърът не успя да отвори {0}. Проверете адреса и интернет връзката.
+en: Part of the site
+bg: Част от сайта
+en: Needed by the site (pictures, videos, fonts, scripts)
+bg: Нужни на сайта (снимки, видео, шрифтове, скриптове)
+en: Big general sites: allowing one opens all of it to your child
+bg: Големи общи сайтове: разрешаването отваря целия сайт за детето
+en: Tracking and advertising: not needed
+bg: Проследяване и реклами: не са нужни
+en: Stopped. Showing what was found so far.
+bg: Спряно. Показано е намереното досега.
+en: Done. {0} address(es) ticked.
+bg: Готово. Отметнати адреси: {0}.
+en: Check what the site needs first (opens it in a hidden browser, about half a minute)
+bg: Първо провери какво е нужно на сайта (отваря го в скрит браузър, около половин минута)
+en: Check all its sites...
+bg: Провери всичките ѝ сайтове...
+en: KidGuard will open each of the {0} links in a hidden browser to find every address the sites need. This takes about {1} minutes. Continue?
+bg: KidGuard ще отвори всяка от {0}-те връзки в скрит браузър, за да намери всички адреси, нужни на сайтовете. Това отнема около {1} минути. Продължаване?
+en: Check all sites of the start page
+bg: Проверка на всички сайтове от началната страница
+en: Nothing was ticked.
+bg: Нищо не е отметнато.
+en: Microsoft Edge or Google Chrome is needed to check a site, and neither was found.
+bg: За проверка на сайт е нужен Microsoft Edge или Google Chrome, а нито един не е намерен.
+en: Type a web address, e.g. https://ucha.se/
+bg: Напишете уеб адрес, напр. https://ucha.se/
