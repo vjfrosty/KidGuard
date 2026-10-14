@@ -266,8 +266,8 @@ en: {0} is asking you for {1} thing(s).
 bg: {0} ви моли за нещо (молби: {1}).
 en: Open Requests
 bg: Отвори „Молби“
-en: Locked by schedule file (forceLock) — press Unlock to clear.
-bg: Заключено от файла с графика (forceLock) – натиснете „Отключи“, за да го премахнете.
+en: Locked by schedule file (forceLock). Press Unlock to clear.
+bg: Заключено от файла с графика (forceLock). Натиснете „Отключи“, за да го премахнете.
 en: Locked until you unlock.
 bg: Заключено, докато не отключите.
 en: Locked until {0}.

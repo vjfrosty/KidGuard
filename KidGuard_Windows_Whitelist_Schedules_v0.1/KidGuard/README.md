@@ -1,4 +1,4 @@
-# KidGuard — Windows account whitelist and schedules
+# KidGuard: Windows account whitelist and schedules
 
 Source package, version 0.1 (2026-10-12), first release. `CHANGELOG.md` lists everything it contains. Designed for Windows 11 x64 and one **standard (non-administrator) child account**, such as Viktor. The account can be a local account, a Microsoft account, a work or school (Entra ID) account or a domain account; see "Account types" below.
 

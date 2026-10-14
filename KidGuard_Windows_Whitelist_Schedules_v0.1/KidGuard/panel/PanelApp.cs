@@ -367,7 +367,7 @@ namespace KidGuard.ParentPanel {
             var lines = new List<string>();
             if (p != null) {
                 var o = p.Overrides;
-                if (p.Schedule.forceLock) lines.Add(L.T("Locked by schedule file (forceLock) — press Unlock to clear."));
+                if (p.Schedule.forceLock) lines.Add(L.T("Locked by schedule file (forceLock). Press Unlock to clear."));
                 if (o.Locked(now)) lines.Add(o.lockUntil == Overrides.Forever ? L.T("Locked until you unlock.") : L.T("Locked until {0}.", UI.When(o.lockUntil, zone)));
                 if (o.Bonus(now)) lines.Add(o.bonusInternet ? L.T("Extra time until {0} (with internet).", UI.When(o.bonusUntil, zone)) : L.T("Extra time until {0} (offline only).", UI.When(o.bonusUntil, zone)));
                 if (o.InternetPaused(now)) lines.Add(L.T("Internet paused until {0}.", UI.When(o.internetPausedUntil, zone)));

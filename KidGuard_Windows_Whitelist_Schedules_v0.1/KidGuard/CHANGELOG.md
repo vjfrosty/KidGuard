@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1 — 2026-10-12 — first release
+## 0.1 (2026-10-12): first release
 
 Parental controls for one child's Windows 11 account, managed from an administrator-only Parent Panel.
 

@@ -1,4 +1,4 @@
-# Validation record — version 0.1, 2026-10-12
+# Validation record: version 0.1, 2026-10-12
 
 Authoring PC: Windows 11 Pro 10.0.26200 x64, Chrome 155.0.8059.40, Edge 155.0.4283.45. Tests ran from a normal (non-elevated) account unless stated otherwise.
 
