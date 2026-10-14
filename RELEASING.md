@@ -1,6 +1,6 @@
 # Releasing KidGuard
 
-A release is a git tag (`v0.1`, `v0.2`, …) on GitHub. Its main download for parents is **`KidGuard-v<version>.zip`**: the `KidGuard` package folder (sources, setup scripts and `SHA256SUMS.txt`, with `Setup.cmd` at the top).
+A release is a git tag (`v0.1`, `v0.2`, …) on GitHub. Its one download for parents is **`KidGuard-v<version>.zip`**: the `KidGuard` package folder (sources, setup scripts and `SHA256SUMS.txt`, with `Setup.cmd` at the top).
 
 The zip contains no `.exe` files on purpose. `Setup.cmd` and `Update.cmd` always compile KidGuard on the parent's PC and overwrite `build\`, so prebuilt programs would be replaced anyway. Building locally also means parents run exactly the published source.
 
