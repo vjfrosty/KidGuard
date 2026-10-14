@@ -6,6 +6,10 @@
 
 **Free parental controls for your child's Windows 11 account.** You choose which websites your child can open and when they can use the computer. Everything else is blocked. Your own account is not affected.
 
+<p align="center">
+  <b>Current version: 0.1</b> · <a href="https://github.com/vjfrosty/KidGuard/releases/latest">Download</a> · <a href="https://github.com/vjfrosty/KidGuard/releases">All versions and what's new</a>
+</p>
+
 - 🌐 **Only the sites you allow.** Your child can open the websites on your list, in Edge, Chrome or Firefox. Everything else is blocked.
 - 🕒 **Time limits.** Set the hours for using the computer and, separately, for using the internet. Your child gets a warning 10 minutes and 1 minute before being signed out.
 - 🙋 **Your child can ask.** A small icon next to the clock shows how much time is left. Your child can ask you for a new website or for more time, and you answer from your Parent Panel.
@@ -39,7 +43,18 @@ Sign in to your **child's** account once, so Windows can set it up. Then **sign 
 ### 2. Download KidGuard
 
 1. Go to the **[latest release](https://github.com/vjfrosty/KidGuard/releases/latest)**.
-2. Under **Assets**, click **`KidGuard-v….zip`** to download it.
+2. Under **Assets**, click **`KidGuard-v0.1.zip`** (or the newest version shown) to download it.
+
+The release page lists other files too. **To install, you only need the zip.**
+
+| File on the release page | What it is |
+|---|---|
+| **`KidGuard-v0.1.zip`** | **Everything you need to install.** Download this one. |
+| `KidGuard-v0.1.zip.sha256` | Checksum to confirm the zip downloaded correctly (optional) |
+| `KidGuard.exe`, `KidGuardPanel.exe`, `KidGuardTray.exe` | The ready-built programs, for people who want to inspect or compare them. Running them on their own does **not** install KidGuard. |
+| `KidGuard-v0.1-programs.sha256` | Checksums of the three programs |
+| `KidGuard-logo.png`, `KidGuard-icon.png` | KidGuard logo and icon |
+| Source code (zip / tar.gz) | Added by GitHub automatically. Use `KidGuard-v0.1.zip` instead. |
 
 ### 3. Unpack the zip
 
@@ -67,6 +82,18 @@ Press **Open Parent Panel** at the end of setup. Later you can open it from the 
 - **Requests**: see what your child asked for, and allow or decline with one click.
 
 That's it. Your child can now sign in as usual.
+
+### What gets installed
+
+Setup builds three programs on your PC and copies them to `C:\ProgramData\KidGuard`, a folder only administrators can change:
+
+| Program | What it does |
+|---|---|
+| `KidGuard.exe` | Runs in the background as a Windows service. It applies the website list and the schedule. |
+| `KidGuardPanel.exe` | The **Parent Panel** that you use. It asks for administrator approval to open. |
+| `KidGuardTray.exe` | The small helper next to the clock in your child's account. |
+
+They also appear under **Settings > Apps > Installed apps** as **KidGuard parental controls**.
 
 ---
 
@@ -125,7 +152,7 @@ KidGuard is a Windows service written in C#. It blocks all of the child account'
 - **[Changelog](KidGuard_Windows_Whitelist_Schedules_v0.1/KidGuard/CHANGELOG.md)**, **[validation record](KidGuard_Windows_Whitelist_Schedules_v0.1/KidGuard/VALIDATION.md)**, **[Windows acceptance checklist](KidGuard_Windows_Whitelist_Schedules_v0.1/KidGuard/tests/WINDOWS-ACCEPTANCE.md)**.
 - **[How releases are made](RELEASING.md).**
 
-The release zip contains source code, not ready-made programs. `Setup.cmd` compiles KidGuard on your own PC with the C# compiler built into Windows (.NET Framework 4.x, no third-party dependencies), so you run exactly the code you can read here. Every file in the zip is listed in `SHA256SUMS.txt`.
+The release zip contains source code, not ready-made programs. `Setup.cmd` compiles KidGuard on your own PC with the C# compiler built into Windows (.NET Framework 4.x, no third-party dependencies), so you run exactly the code you can read here. Every file in the zip is listed in `SHA256SUMS.txt`. The ready-built `.exe` files attached to each release are compiled from the tagged source and come with their own checksums. They are for inspection and comparison, and the installer does not use them. Compiled files are never committed to this repository.
 
 ```powershell
 cd KidGuard_Windows_Whitelist_Schedules_v0.1\KidGuard
