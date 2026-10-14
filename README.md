@@ -153,3 +153,7 @@ cd KidGuard_Windows_Whitelist_Schedules_v0.1\KidGuard
 | [`KidGuard_Windows_Whitelist_Schedules_v0.1/KidGuard/`](KidGuard_Windows_Whitelist_Schedules_v0.1/KidGuard/) | The app: `src/` service, `panel/` Parent Panel, `tray/` child's helper, `setup/` wizard, `config/` defaults, `lang/` translations, `tests/`, and the setup scripts |
 | [`tools/`](tools/) | Release packaging |
 | `Media/` | Logo and icon |
+
+## License
+
+KidGuard is free and open source under the [MIT License](LICENSE).
