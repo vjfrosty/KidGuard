@@ -43,18 +43,7 @@ Sign in to your **child's** account once, so Windows can set it up. Then **sign 
 ### 2. Download KidGuard
 
 1. Go to the **[latest release](https://github.com/vjfrosty/KidGuard/releases/latest)**.
-2. Under **Assets**, click **`KidGuard-v0.1.zip`** (or the newest version shown) to download it.
-
-The release page lists other files too. **To install, you only need the zip.**
-
-| File on the release page | What it is |
-|---|---|
-| **`KidGuard-v0.1.zip`** | **Everything you need to install.** Download this one. |
-| `KidGuard-v0.1.zip.sha256` | Checksum to confirm the zip downloaded correctly (optional) |
-| `KidGuard.exe`, `KidGuardPanel.exe`, `KidGuardTray.exe` | The ready-built programs, for people who want to inspect or compare them. Running them on their own does **not** install KidGuard. |
-| `KidGuard-v0.1-programs.sha256` | Checksums of the three programs |
-| `KidGuard-logo.png`, `KidGuard-icon.png` | KidGuard logo and icon |
-| Source code (zip / tar.gz) | Added by GitHub automatically. Use `KidGuard-v0.1.zip` instead. |
+2. Under **Assets**, click **`KidGuard-v0.1.zip`** (or the newest version shown) to download it. That's the only file you need. The release page explains the other files.
 
 ### 3. Unpack the zip
 
@@ -152,7 +141,7 @@ KidGuard is a Windows service written in C#. It blocks all of the child account'
 - **[Changelog](KidGuard_Windows_Whitelist_Schedules_v0.1/KidGuard/CHANGELOG.md)**, **[validation record](KidGuard_Windows_Whitelist_Schedules_v0.1/KidGuard/VALIDATION.md)**, **[Windows acceptance checklist](KidGuard_Windows_Whitelist_Schedules_v0.1/KidGuard/tests/WINDOWS-ACCEPTANCE.md)**.
 - **[How releases are made](RELEASING.md).**
 
-The release zip contains source code, not ready-made programs. `Setup.cmd` compiles KidGuard on your own PC with the C# compiler built into Windows (.NET Framework 4.x, no third-party dependencies), so you run exactly the code you can read here. Every file in the zip is listed in `SHA256SUMS.txt`. The ready-built `.exe` files attached to each release are compiled from the tagged source and come with their own checksums. They are for inspection and comparison, and the installer does not use them. Compiled files are never committed to this repository.
+The release zip contains source code, not ready-made programs. `Setup.cmd` compiles KidGuard on your own PC with the C# compiler built into Windows (.NET Framework 4.x, no third-party dependencies), so you run exactly the code you can read here. Every file in the zip is listed in `SHA256SUMS.txt`. Ready-built programs for each version are on the [releases page](https://github.com/vjfrosty/KidGuard/releases).
 
 ```powershell
 cd KidGuard_Windows_Whitelist_Schedules_v0.1\KidGuard
