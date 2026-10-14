@@ -4,7 +4,7 @@ A release is a git tag (`v0.1`, `v0.2`, …) on GitHub. Its main download for pa
 
 The zip contains no `.exe` files on purpose. `Setup.cmd` and `Update.cmd` always compile KidGuard on the parent's PC and overwrite `build\`, so prebuilt programs would be replaced anyway. Building locally also means parents run exactly the published source.
 
-Each release also carries the ready-built programs (`KidGuard.exe`, `KidGuardPanel.exe`, `KidGuardTray.exe`) with `KidGuard-v<version>-programs.sha256`, for inspection and comparison, plus `KidGuard-logo.png` and `KidGuard-icon.png` from `Media\`. None of these go into git.
+The zip is the only file uploaded to a release. GitHub shows its SHA-256 on the release page. GitHub also adds "Source code (zip / tar.gz)" to every release automatically; these can't be removed, so the release notes tell parents to ignore them.
 
 ## Steps
 
@@ -31,15 +31,15 @@ Run these from the repository root, in PowerShell, on a clean `main` that is pus
 
 4. **Commit and push** the changes.
 
-5. **Make the release files.** This checks every file against `SHA256SUMS.txt` first and stops if anything is missing or different. It also stops if `build\` is older than the sources (run step 2 again):
+5. **Make the zip.** This checks every file against `SHA256SUMS.txt` first and stops if anything is missing or different:
    ```powershell
    .\tools\New-ReleasePackage.ps1 -Version 0.2
    ```
-   It writes the zip, `KidGuard-v0.2.zip.sha256`, the three programs, `KidGuard-v0.2-programs.sha256`, and the logo and icon to `dist\`. It empties `dist\` first. `dist\` is not committed.
+   It writes `dist\KidGuard-v0.2.zip`. It empties `dist\` first. `dist\` is not committed.
 
-6. **Publish the release.** This tags the current `main` and uploads everything in `dist\`:
+6. **Publish the release.** This tags the current `main` and uploads the zip:
    ```powershell
-   gh release create v0.2 (Get-ChildItem dist -File).FullName `
+   gh release create v0.2 dist\KidGuard-v0.2.zip `
      --target main --title "KidGuard 0.2" --notes-file release-notes.md
    ```
    Release notes should start with the parent-facing install summary (download, Unblock, Extract All, `Setup.cmd`, or `Update.cmd` for an existing install), followed by what changed. Say clearly that the zip is the file to download.

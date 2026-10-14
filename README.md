@@ -43,7 +43,7 @@ Sign in to your **child's** account once, so Windows can set it up. Then **sign 
 ### 2. Download KidGuard
 
 1. Go to the **[latest release](https://github.com/vjfrosty/KidGuard/releases/latest)**.
-2. Under **Assets**, click **`KidGuard-v0.1.zip`** (or the newest version shown) to download it. That's the only file you need. The release page explains the other files.
+2. Under **Assets**, click **`KidGuard-v0.1.zip`** (or the newest version shown) to download it. Ignore the "Source code" files that GitHub adds below it.
 
 ### 3. Unpack the zip
 
@@ -141,8 +141,7 @@ KidGuard is a Windows service written in C#. It blocks all of the child account'
 - **[Changelog](KidGuard_Windows_Whitelist_Schedules_v0.1/KidGuard/CHANGELOG.md)**, **[validation record](KidGuard_Windows_Whitelist_Schedules_v0.1/KidGuard/VALIDATION.md)**, **[Windows acceptance checklist](KidGuard_Windows_Whitelist_Schedules_v0.1/KidGuard/tests/WINDOWS-ACCEPTANCE.md)**.
 - **[How releases are made](RELEASING.md).**
 
-The release zip contains source code, not ready-made programs. `Setup.cmd` compiles KidGuard on your own PC with the C# compiler built into Windows (.NET Framework 4.x, no third-party dependencies), so you run exactly the code you can read here. Every file in the zip is listed in `SHA256SUMS.txt`. Ready-built programs for each version are on the [releases page](https://github.com/vjfrosty/KidGuard/releases).
-
+The release zip contains source code, not ready-made programs. `Setup.cmd` compiles KidGuard on your own PC with the C# compiler built into Windows (.NET Framework 4.x, no third-party dependencies), so you run exactly the code you can read here. Every file in the zip is listed in `SHA256SUMS.txt`.
 ```powershell
 cd KidGuard_Windows_Whitelist_Schedules_v0.1\KidGuard
 .\Build.ps1                   # compile all programs and run the self-tests (no system changes)

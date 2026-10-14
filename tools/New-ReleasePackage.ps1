@@ -1,6 +1,6 @@
 #requires -Version 5.1
-# Makes the download for parents: dist\KidGuard-v<version>.zip (one "KidGuard" folder with Setup.cmd at the top)
-# and dist\KidGuard-v<version>.zip.sha256. Changes nothing on this PC except the dist folder. See RELEASING.md.
+# Makes the release download in dist\: KidGuard-v<version>.zip (one "KidGuard" folder with Setup.cmd at the top).
+# Changes nothing outside dist. See RELEASING.md.
 [CmdletBinding()]
 param(
     [Parameter(Mandatory)][ValidatePattern('^\d+\.\d+(\.\d+)?$')][string]$Version,
@@ -50,33 +50,5 @@ try {
     }
 } finally { $archive.Dispose() }
 
-$hash = (Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant()
-[IO.File]::WriteAllText("$zip.sha256", "$hash  KidGuard-v$Version.zip`n")
 Write-Host "Checked $($files.Count - 1) files against SHA256SUMS.txt"
 Write-Host "Made: $zip"
-Write-Host "SHA256: $hash"
-
-# Ready-built programs, attached to the release next to the zip. Run Build.ps1 first so they match the sources.
-$programs = @('KidGuard.exe', 'KidGuardPanel.exe', 'KidGuardTray.exe')
-$build = Join-Path $Package 'build'
-$newest = (Get-ChildItem -LiteralPath $Package -Recurse -File | Where-Object { $_.FullName -notlike "$build\*" -and $_.Extension -ne '.lnk' } |
-    Measure-Object LastWriteTimeUtc -Maximum).Maximum
-$lines = @()
-foreach ($name in $programs) {
-    $source = Join-Path $build $name
-    if (-not (Test-Path -LiteralPath $source)) { throw "build\$name not found. Run Build.ps1 first." }
-    if ((Get-Item -LiteralPath $source).LastWriteTimeUtc -lt $newest) { throw "build\$name is older than the sources. Run Build.ps1 again." }
-    Copy-Item -LiteralPath $source -Destination (Join-Path $dist $name) -Force
-    $lines += '{0}  {1}' -f (Get-FileHash -LiteralPath $source -Algorithm SHA256).Hash.ToLowerInvariant(), $name
-}
-$programSums = Join-Path $dist "KidGuard-v$Version-programs.sha256"
-[IO.File]::WriteAllText($programSums, ($lines -join "`n") + "`n")
-Write-Host "Copied programs: $($programs -join ', ')"
-Write-Host "Made: $programSums"
-
-# Logo and icon from Media\, renamed without spaces (GitHub turns spaces in asset names into dots).
-$media = Join-Path $PSScriptRoot '..\Media'
-foreach ($pair in @(@('KidGuard guardian shield logo.png', 'KidGuard-logo.png'), @('KidGuard shield checkmark icon.png', 'KidGuard-icon.png'))) {
-    Copy-Item -LiteralPath (Join-Path $media $pair[0]) -Destination (Join-Path $dist $pair[1]) -Force
-}
-Write-Host 'Copied media: KidGuard-logo.png, KidGuard-icon.png'
